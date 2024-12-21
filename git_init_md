@@ -2,9 +2,41 @@ githubとの連携
 
 ・任意の場所で.git作成
 git init
+
+
 ・「.git/HEAD」ファイルの内容を以下のように変更
 変更前：ref: refs/heads/master
 変更後：ref: refs/heads/main
+
+
 ・リモートリポジトリを設定（new urlにgithubのリポジトリURL)
 git remote set-url origin {new url}
-今回：git remote set-url origin　https://github.com/coffeebreak-chicken/Mint
+今回：git remote add origin https://github.com/coffeebreak-chicken/Mint
+
+・ステージに追加
+git add {フォルダ/ファイル}
+今回：git add LinuxMint/.
+
+
+・gitユーザー名とメアド設定
+git config --global user.name "Mint Lina"
+git config --global user.email "MintLinux@git.com"
+
+
+・ssh通信へ変更
+git remote set-url origin {new url}
+今回：git remote set-url origin git@github.com:coffeebreak-chicken/Mint.git
+
+
+・ssh鍵作成
+・手元（クライアント）側を先に用意
+https://www.kagoya.jp/howto/it-glossary/develop/github_ssh/
+
+・コミット
+git commit -m “コミットコメント”
+今回：git commit -m "新規作成"
+
+
+・プッシュ（masterからmianに変更したので）
+git push origin master
+今回：git push origin main
