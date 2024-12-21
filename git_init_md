@@ -1,4 +1,10 @@
 githubとの連携
 
-・任意の場所でgit init
-・
+・任意の場所で.git作成
+git init
+・「.git/HEAD」ファイルの内容を以下のように変更
+変更前：ref: refs/heads/master
+変更後：ref: refs/heads/main
+・リモートリポジトリを設定（new urlにgithubのリポジトリURL)
+git remote set-url origin {new url}
+今回：git remote set-url origin　https://github.com/coffeebreak-chicken/Mint
