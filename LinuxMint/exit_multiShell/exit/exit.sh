@@ -8,7 +8,7 @@ do
 
 
     # シェル多重起動ならexit
-    ps -ef | grep $0 | grep -v >/dev/null
+    ps -ef | grep -v $$ | grep "$0 $*" >/dev/null
     if [ %? != 0 ]; then
         echo "多重起動を検知したため強制終了します" > ito.logexit
         exit 0
